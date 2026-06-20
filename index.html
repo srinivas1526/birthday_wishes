@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Mounika 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .container {
+      padding: 2rem;
+      text-align: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1, h2 {
+      font-size: 3rem;
+      margin: 1rem 0;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+      }
+      to {
+        text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493, 0 0 40px #ff69b4;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #333;
+      margin: 1rem 0;
+      animation: fadeIn 2s ease;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: #ff69b4;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, background 0.3s;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff69b4;
+    }
+
+    .btn:hover {
+      background: #ff1493;
+      transform: scale(1.05);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .photo {
+      width: 200px;
+      border: 5px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff69b4;
+      transition: transform 0.5s ease;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .video {
+      width: 360px;
+      height: 640px;
+      object-fit: cover;
+      border: 5px solid #fff;
+      border-radius: 10px;
+      margin-top: 1rem;
+      box-shadow: 0 0 15px #f06292;
+      animation: zoomIn 1s ease-in-out;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .animated-text {
+      animation: popIn 1s ease-out forwards;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    .fade-in.delay {
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .typewriter {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid #333;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    .rainbow-text {
+      background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: hue 5s infinite linear;
+    }
+
+    @keyframes hue {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .green-yellow-text {
+      background: linear-gradient(to right, green, yellow);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: hue 4s infinite linear;
+    }
+
+    .to-mounika {
+      background: linear-gradient(to right, #ff1493, #ff6ec4);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: bounce 2s infinite ease-in-out;
+      font-size: 2.5rem;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .heart-text {
+      color: red;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .wish-box {
+      background: #fff0f5;
+      border-radius: 15px;
+      margin: 1rem auto;
+      padding: 1rem;
+      max-width: 500px;
+      box-shadow: 0 0 20px #ff69b4;
+      border: 3px dashed #ff1493;
+      animation: flicker 2s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.85; }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .cake-img-container {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cake-img-container img {
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #ff69b4;
+      animation: pulseCake 2s infinite;
+    }
+
+    @keyframes pulseCake {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .music-label {
+      font-size: 1.5rem;
+      color: green;
+      font-weight: bold;
+      margin-top: 2rem;
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .music-player {
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .no-animation {
+      animation: none !important;
+      text-shadow: none !important;
+      background: none !important;
+      color: black;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Page 1 -->
+  <div id="page1" class="container">
+    <h1 class="animated-text rainbow-text">
+  Happy Birthday Mounika <span class="no-animation">🎂🎉🥳</span>
+</h1>
+    <p class="fade-in">Wishing you many more Happy returns of the day, and your life filled with love, laughter, and everything your heart desires!</p>
+
+    <div class="cake-img-container">
+      <img src="cakeimage.jpeg" alt="birthday Cake image">
+    </div>
+
+    <button class="btn" onclick="showPage('page2')">Go to Gallery 📸</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="container hidden">
+    <h2 class="animated-text green-yellow-text">Special Memory Moments 💚💛</h2>
+
+    <div class="gallery">
+      <img src="image1.jpeg" class="photo" />
+      <img src="image2.jpeg" class="photo" />
+      <img src="image3.jpeg" class="photo" />
+      <img src="image4.jpeg" class="photo" />
+      <img src="image5.jpeg" class="photo" />
+      <img src="image6.jpeg" class="photo" />
+    </div>
+
+    <video controls autoplay loop class="video">
+      <source src="video.mp4" />
+    </video>
+
+    <div class="music-label">Special song for you Mounisri</div>
+    <div class="music-player">
+      <audio controls>
+        <source src="music.mpeg" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <button class="btn" onclick="showPage('page3')">Go to Wishes 💌</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div id="page3" class="container hidden">
+    <h2 class="to-mounika">To Mounika ❤</h2>
+    <p class="typewriter heart-text">May your day be filled with sunshine, your heart with love, and your life with laughter.</p>
+    <p class="fade-in delay heart-text">You are amazing, inspiring, and deserve the very best today and always. 🥳</p>
+
+    <div class="wish-box">
+      <h3>🎉💖 From Srinivas</h3>
+      <p>Dear friend Mounisri,💖 Wishing you a day filled with love, laughter, and everything your heart desires.
+        🌟 You are more than a friend—you're a light in my life!</p>  
+
+    </div>
+
+    <div class="wish-box">
+      <h3>👩‍❤️‍👩 From Hema Priya</h3>
+      <p>Happy Birthday bestie! May all your dreams come true and your smile never fades!</p>
+    </div>
+
+    <div class="wish-box">
+      <h3>👩‍❤️‍👩 From manasa</h3>
+      <p>Happy Birthday my bestfriend keep smile and achieve your dreams!</p>
+    </div>
+
+      <div class="wish-box">
+        <h3>🙋🏻‍♂From narendra</h3>
+        <p>Wish you many more happy returns Mounika, keep smile and stay blessed!</p>
+    </div>
+
+    <div class="wish-box">
+      <h3>👨‍👦 From Brother Balaji</h3>
+      <p>You’re not just a sister, you’re my hero. Have a birthday as beautiful as your soul!</p>
+    </div>
+
+    <div class="wish-box">
+      <h3>👨‍👩‍👧 From Mom & Dad</h3>
+      <p>Our sweet daughter, your presence is the biggest blessing in our lives. Happy Birthday with love and pride!</p>
+    </div>
+
+    <button class="btn" onclick="showPage('page1')">Back to Start ⬅</button>
+   </div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="https://dl.sndup.net/5rkf/Happy%20Birthday%20Mounika.mp3" type="audio/mp3" />
+  </audio>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll(".container").forEach(el => el.classList.add("hidden"));
+      document.getElementById(pageId).classList.remove("hidden");
+    }
+
+    window.onload = function () {
+      createConfetti();
+    };
+
+    function createConfetti() {
+      const colors = ['#ff69b4', '#ff1493', '#ffd700', '#00ffff', '#adff2f'];
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.position = 'fixed';
+        confetti.style.left = `${Math.random() * 100}%`;
+        confetti.style.top = `${Math.random() * 100}%`;
+        confetti.style.width = '10px';
+        confetti.style.height = '10px';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.opacity = 0.8;
+        confetti.style.borderRadius = '50%';
+        confetti.style.zIndex = 9999;
+        confetti.style.animation = `fall ${5 + Math.random() * 5}s linear infinite`;
+        document.body.appendChild(confetti);
+      }
+
+      const style = document.createElement('style');
+      style.innerHTML = `
+        @keyframes fall {
+          0% { transform: translateY(-100px) rotate(0deg); }
+          100% { transform: translateY(100vh) rotate(360deg); }
+        }`;
+      document.head.appendChild(style);
+    }
+  </script>
+</body>
+</html>
